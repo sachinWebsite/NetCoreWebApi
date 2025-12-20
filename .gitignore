@@ -1,0 +1,52 @@
+# ASP.NET Core / .NET project .gitignore
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# Logs
+logs/
+*.log
+
+# Secrets and sensitive files
+secrets.json
+*.key
+*.pfx
+*.snk
+API/appsettings.Development.json
+API/appsettings.*.json
+!API/appsettings.json
+
+# Environment files
+.env
+.env.*
+
+# Test results
+TestResults/
+
+# Others
+*.dbmdl
+*.db
+*.bak
+*.mdf
+*.ldf
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+*.sln.iml

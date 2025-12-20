@@ -1,0 +1,521 @@
+2025-12-13 22:39:32.665 +05:30 [WRN] No XML encryptor configured. Key {52d792b3-b04e-4d51-adb7-5dea9cb5ce10} may be persisted to storage in unencrypted form.
+2025-12-13 22:39:48.131 +05:30 [INF] Request: GET /swagger CorrelationId: d50b8f40-f23c-4254-a290-96f1e1c20353
+2025-12-13 22:39:48.137 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-12-13 22:39:49.758 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:49.814 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:49.821 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:49.835 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:49.845 +05:30 [ERR] Connection id "0HNHQD9LQSV73", Request id "0HNHQD9LQSV73:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:39:56.340 +05:30 [INF] Request: GET /swagger CorrelationId: ab0b9091-d471-44b2-8e36-b4113814f6b9
+2025-12-13 22:39:56.346 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:56.365 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:56.376 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:56.393 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:56.399 +05:30 [ERR] Connection id "0HNHQD9LQSV73", Request id "0HNHQD9LQSV73:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:39:58.390 +05:30 [INF] Request: GET /swagger CorrelationId: c42ebc98-d757-4fa8-8b5a-6254be3a6ad7
+2025-12-13 22:39:58.398 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:58.424 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:58.431 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:58.450 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:39:58.458 +05:30 [ERR] Connection id "0HNHQD9LQSV73", Request id "0HNHQD9LQSV73:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:40:00.071 +05:30 [INF] Request: GET /swagger CorrelationId: fd44fd67-a883-4e0d-acb7-0b643cdbfbc7
+2025-12-13 22:40:00.076 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:00.095 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:00.104 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:00.125 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:00.133 +05:30 [ERR] Connection id "0HNHQD9LQSV73", Request id "0HNHQD9LQSV73:00000004": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:40:07.316 +05:30 [INF] Request: GET /swagger/index.html CorrelationId: 1194f6f9-f68e-4a3a-a0b3-246b3830cdb4
+2025-12-13 22:40:07.322 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:07.339 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:07.347 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:07.365 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:40:07.373 +05:30 [ERR] Connection id "0HNHQD9LQSV73", Request id "0HNHQD9LQSV73:00000005": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:54:48.859 +05:30 [INF] Request: GET /swagger CorrelationId: 2a2e90d2-35a0-4641-9da5-3ef362d1fb86
+2025-12-13 22:54:48.961 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-12-13 22:54:49.017 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:49.230 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:49.245 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:49.275 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:49.292 +05:30 [ERR] Connection id "0HNHQDI285Q1J", Request id "0HNHQDI285Q1J:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-13 22:54:59.018 +05:30 [INF] Request: GET /swagger/index.html CorrelationId: d81d85a0-c576-407b-9bf5-8959f57eb5c0
+2025-12-13 22:54:59.026 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:59.051 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:59.062 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:59.088 +05:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-13 22:54:59.099 +05:30 [ERR] Connection id "0HNHQDI285Q1J", Request id "0HNHQDI285Q1J:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: JWT_KEY environment variable not set
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Program.cs:line 69
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at API.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\RequestResponseLoggingMiddleware.cs:line 23
+   at API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in D:\.Net Core Web Api Research\.NetWebApiMasterFeatures\API\Middleware\CorrelationIdMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
