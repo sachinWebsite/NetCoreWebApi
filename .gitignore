@@ -50,3 +50,6 @@ Thumbs.db
 # Rider
 .idea/
 *.sln.iml
+
+**/bin/
+**/obj/
