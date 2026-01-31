@@ -14,16 +14,26 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.RateLimiting;
 using Polly;
+using Polly.Extensions.Http;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Versioning;
+// using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Auth.Manager.AuthManagerExtensions;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add Swagger/OpenAPI support
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "NetCoreWebApi API",
+        Version = "v1"
+    });
+});
 builder.Configuration.AddEnvironmentVariables();
 
 // Configure Serilog for structured logging and observability
@@ -44,13 +54,13 @@ builder.Services.AddControllers(options =>
 });
 
 // API Versioning for backward compatibility
-builder.Services.AddApiVersioning(options =>
-{
-    options.AssumeDefaultVersionWhenUnspecified = true;
-    options.DefaultApiVersion = new ApiVersion(1, 0);
-    options.ReportApiVersions = true;
-    options.ApiVersionReader = new HeaderApiVersionReader("api-version");
-});
+// builder.Services.AddApiVersioning(options =>
+// {
+//     options.AssumeDefaultVersionWhenUnspecified = true;
+//     options.DefaultApiVersion = new ApiVersion(1, 0);
+//     options.ReportApiVersions = true;
+//     options.ApiVersionReader = new HeaderApiVersionReader("api-version");
+// });
 
 // FluentValidation for pipeline-based request validation
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
@@ -65,28 +75,30 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Custom Platform Identity Services
+builder.Services.AddPlatformIdentity(builder.Configuration);
 // JWT Authentication for security
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
-                builder.Configuration["JWT_KEY"] ?? throw new InvalidOperationException("JWT_KEY environment variable not set")))
-        };
-    });
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//     .AddJwtBearer(options =>
+//     {
+//         options.TokenValidationParameters = new TokenValidationParameters
+//         {
+//             ValidateIssuer = true,
+//             ValidateAudience = true,
+//             ValidateLifetime = true,
+//             ValidateIssuerSigningKey = true,
+//             ValidIssuer = builder.Configuration["Jwt:Issuer"],
+//             ValidAudience = builder.Configuration["Jwt:Audience"],
+//             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+//                 builder.Configuration["JWT_KEY"] ?? throw new InvalidOperationException("JWT_KEY environment variable not set")))
+//         };
+//     });
 
 // Policy-based authorization
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
-});
+// builder.Services.AddAuthorization(options =>
+// {
+//     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+// });
 
 // Data Protection API for secure key storage
 builder.Services.AddDataProtection()
@@ -122,24 +134,28 @@ builder.Services.AddRateLimiter(options =>
 builder.Services.AddResponseCaching();
 
 // HttpClient with Polly for resilience (retry & circuit breaker)
-builder.Services.AddHttpClient("PollyClient")
-    .AddPolicyHandler(Polly.Policy<HttpResponseMessage>
-        .Handle<HttpRequestException>()
-        .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))
-    .AddPolicyHandler(Polly.Policy<HttpResponseMessage>
-        .Handle<HttpRequestException>()
-        .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+// builder.Services.AddHttpClient("PollyClient")
+//     .AddPolicyHandler(HttpPolicyExtensions
+//         .HandleTransientHttpError()
+//         .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))
+//     .AddPolicyHandler(HttpPolicyExtensions
+//         .HandleTransientHttpError()
+//         .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
 
 var app = builder.Build();
-
-// Enable Swagger middleware
-app.UseSwagger();
-app.UseSwaggerUI();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+
+    // Enable Swagger middleware & UI in Development only
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetCoreWebApi API v1");
+        c.RoutePrefix = "swagger";
+    });
 }
 else
 {
