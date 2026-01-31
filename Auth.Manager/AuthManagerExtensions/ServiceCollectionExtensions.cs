@@ -27,12 +27,13 @@ public static class ServiceCollectionExtensions
         services.AddScoped<ITokenIssuer, TokenIssuer>();
         services.AddScoped<TokenExchangeService>();
         services.AddScoped<RefreshTokenService>();
+        services.AddScoped<OneTimeTokenService>();
 
         // 3️⃣ External token validator (default)
         services.AddScoped<IExternalTokenValidator, ExternalTokenValidator>();
 
         // 4️⃣ Refresh token store (can be swapped)
-        services.AddScoped<IRefreshTokenService, InMemoryRefreshTokenService>();
+        services.AddSingleton<IRefreshTokenService, InMemoryRefreshTokenService>();
 
         services.AddScoped<IUserContext, UserContext>();
 

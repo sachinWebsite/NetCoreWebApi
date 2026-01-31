@@ -75,7 +75,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Custom Platform Identity Services
+// Custom Platform Identity Services as Dependency Injection
 builder.Services.AddPlatformIdentity(builder.Configuration);
 // JWT Authentication for security
 // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

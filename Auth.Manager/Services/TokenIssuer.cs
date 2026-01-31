@@ -20,18 +20,27 @@ public sealed class TokenIssuer : ITokenIssuer
     {
         expiresAt = DateTime.UtcNow.AddMinutes(_options.AccessTokenMinutes);
 
+        //var claims = new List<Claim>
+        //{
+        //    new(JwtRegisteredClaimNames.Sub, user.UserId),
+        //    new(JwtRegisteredClaimNames.Email, user.Email),
+        //    new("provider", user.Provider)
+        //};
+
         var claims = new List<Claim>
         {
+            new("oid", user.UserId),
+            new("preferred_username", user.Email),
             new(JwtRegisteredClaimNames.Sub, user.UserId),
             new(JwtRegisteredClaimNames.Email, user.Email),
             new("provider", user.Provider)
         };
 
+
         claims.AddRange(user.Roles.Select(r => new Claim("role", r)));
         claims.AddRange(user.Claims.Select(c => new Claim(c.Key, c.Value)));
 
-        var key = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(_options.SigningKey));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SigningKey));
 
         var token = new JwtSecurityToken(
             issuer: _options.Issuer,

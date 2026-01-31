@@ -1,3 +1,4 @@
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Security.Cryptography;
 
@@ -8,6 +9,6 @@ internal static class SecureTokenGenerator
     public static string Generate(int size = 64)
     {
         var bytes = RandomNumberGenerator.GetBytes(size);
-        return Convert.ToBase64String(bytes);
+        return Base64UrlEncoder.Encode(bytes);
     }
 }

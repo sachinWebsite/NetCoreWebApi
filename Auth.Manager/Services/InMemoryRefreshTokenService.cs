@@ -34,7 +34,6 @@ public class InMemoryRefreshTokenService: IRefreshTokenService
     public Task<RefreshToken> ValidateAsync(string token)
     {
         var hashed = RefreshTokenHasher.Hash(token);
-
         if (!_store.TryGetValue(hashed, out var stored))
             throw new SecurityTokenException("Invalid refresh token");
 

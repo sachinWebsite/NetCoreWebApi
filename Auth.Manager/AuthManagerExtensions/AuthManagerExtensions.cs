@@ -20,6 +20,7 @@ public static class AuthManagerExtensions
         services.AddScoped<ITokenIssuer, TokenIssuer>();
         services.AddScoped<TokenExchangeService>();
         services.AddScoped<RefreshTokenService>();
+        services.AddScoped<OneTimeTokenService>();
 
         return services;
     }
