@@ -2,13 +2,10 @@ using API.Extensions;
 using API.Filters;
 using API.Middleware;
 using Application.DependencyResolver;
-using Application.Interfaces;
-using Application.UseCases;
 using Auth.Manager.DependencyResolver;
 using FluentValidation;
 using Infrastructure.Data;
 using Infrastructure.DependencyResolver;
-using Infrastructure.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.RateLimiting;
@@ -123,8 +120,6 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     //app.UseDeveloperExceptionPage();
-
-    // Enable Swagger middleware & UI in Development only
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
