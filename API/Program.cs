@@ -20,8 +20,8 @@ using Microsoft.AspNetCore.Mvc;
 // using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Auth.Manager.AuthManagerExtensions;
 using Microsoft.OpenApi.Models;
+using Auth.Manager.DependencyResolver;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add Swagger/OpenAPI support
