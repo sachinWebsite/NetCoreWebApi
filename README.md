@@ -1,10 +1,10 @@
-# NetWebApiMasterFeatures
+# ASP.NET Core Web API Master Features
 
 ## Overview
 NetWebApiMasterFeatures is a modular, scalable, and production-ready ASP.NET Core Web API project designed for rapid enterprise development. It demonstrates best practices in architecture, security, logging, and maintainability, making it an ideal starting point for robust backend services.
 
 ## Tech Stack
-- **.NET 8 (ASP.NET Core Web API)**
+- **.NET 10 (ASP.NET Core Web API)**
 - **Entity Framework Core** (Data Access)
 - **OpenAPI/Swagger** (API Documentation)
 - **MediatR** (CQRS/Use Cases)
