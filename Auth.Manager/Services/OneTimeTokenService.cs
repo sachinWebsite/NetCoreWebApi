@@ -2,7 +2,9 @@
 using Auth.Manager.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
+using Auth.Manager.Common.Exceptions;
 
 namespace Auth.Manager.Services
 {
@@ -29,7 +31,7 @@ namespace Auth.Manager.Services
             var user = await _userContext.GetAsync("100");
             if (user.Email != emailId)
             {
-                throw new InvalidOperationException($"User with ID {emailId} not found in the user context.");
+                throw new AppValidationException($"User with ID {emailId} not found in the user context.");
             }
 
             // Use the configured issuer to create an access token (keeps separation of concerns).

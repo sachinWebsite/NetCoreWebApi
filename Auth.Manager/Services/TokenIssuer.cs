@@ -20,13 +20,6 @@ public sealed class TokenIssuer : ITokenIssuer
     {
         expiresAt = DateTime.UtcNow.AddMinutes(_options.AccessTokenMinutes);
 
-        //var claims = new List<Claim>
-        //{
-        //    new(JwtRegisteredClaimNames.Sub, user.UserId),
-        //    new(JwtRegisteredClaimNames.Email, user.Email),
-        //    new("provider", user.Provider)
-        //};
-
         var claims = new List<Claim>
         {
             new("oid", user.UserId),

@@ -50,8 +50,7 @@ public static class ServiceCollectionExtensions
 
                     ValidIssuer = options.Jwt.Issuer,
                     ValidAudience = options.Jwt.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(options.Jwt.SigningKey))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Jwt.SigningKey))
                 };
             });
 

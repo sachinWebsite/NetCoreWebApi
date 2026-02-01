@@ -49,8 +49,12 @@ builder.Host.UseSerilog();
 // Add controllers with global filters for exception handling and validation
 builder.Services.AddControllers(options =>
 {
-    options.Filters.Add<GlobalExceptionFilter>();
-    options.Filters.Add<ValidationFilter>();
+    //options.Filters.Add<GlobalExceptionFilter>();
+    //options.Filters.Add<ValidationFilter>();
+    options.Filters.Add<ApiActionFilter>();
+}).ConfigureApiBehaviorOptions(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
 });
 
 // API Versioning for backward compatibility
@@ -147,7 +151,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    //app.UseDeveloperExceptionPage();
 
     // Enable Swagger middleware & UI in Development only
     app.UseSwagger();
@@ -166,6 +170,7 @@ else
 // Custom middleware for correlation ID and logging
 app.UseMiddleware<CorrelationIdMiddleware>();
 app.UseMiddleware<RequestResponseLoggingMiddleware>();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
