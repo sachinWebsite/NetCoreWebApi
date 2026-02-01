@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication;
+using Auth.Manager.Common.Extensions;
 
 namespace Auth.Manager.DependencyResolver;
 
@@ -38,21 +39,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IUserContext, UserContext>();
 
         // 5️⃣ JWT Authentication (FULLY encapsulated)
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(jwt =>
-            {
-                jwt.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-
-                    ValidIssuer = options.Jwt.Issuer,
-                    ValidAudience = options.Jwt.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Jwt.SigningKey))
-                };
-            });
+        services.AddCustomJwtAuthentication(options.Jwt);
 
         return services;
     }

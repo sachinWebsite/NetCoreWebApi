@@ -1,14 +1,14 @@
 using Auth.Manager.Models;
 using Auth.Manager.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
-
-    // // [Route("auth")]
     public class AuthController : ControllerBase
     {
         private readonly TokenExchangeService _exchange;

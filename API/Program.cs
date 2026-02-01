@@ -1,39 +1,21 @@
-// Clean Architecture: API layer depends only on Application and Infrastructure
-// SOLID: Dependency Inversion via DI container
-// Async everywhere for scalability
+using API.Extensions;
 using API.Filters;
 using API.Middleware;
 using Application.Interfaces;
+using Auth.Manager.DependencyResolver;
 using FluentValidation;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.AspNetCore.DataProtection;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.AspNetCore.RateLimiting;
-using Polly;
-using Polly.Extensions.Http;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
-// using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Microsoft.OpenApi.Models;
-using Auth.Manager.DependencyResolver;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add Swagger/OpenAPI support
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "NetCoreWebApi API",
-        Version = "v1"
-    });
-});
+builder.Services.AddJwtSwagger("NetCoreWebApi API");
 builder.Configuration.AddEnvironmentVariables();
 
 // Configure Serilog for structured logging and observability
@@ -52,6 +34,7 @@ builder.Services.AddControllers(options =>
     //options.Filters.Add<GlobalExceptionFilter>();
     //options.Filters.Add<ValidationFilter>();
     options.Filters.Add<ApiActionFilter>();
+    options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter());
 }).ConfigureApiBehaviorOptions(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
@@ -81,22 +64,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Custom Platform Identity Services as Dependency Injection
 builder.Services.AddPlatformIdentity(builder.Configuration);
-// JWT Authentication for security
-// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//     .AddJwtBearer(options =>
-//     {
-//         options.TokenValidationParameters = new TokenValidationParameters
-//         {
-//             ValidateIssuer = true,
-//             ValidateAudience = true,
-//             ValidateLifetime = true,
-//             ValidateIssuerSigningKey = true,
-//             ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//             ValidAudience = builder.Configuration["Jwt:Audience"],
-//             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
-//                 builder.Configuration["JWT_KEY"] ?? throw new InvalidOperationException("JWT_KEY environment variable not set")))
-//         };
-//     });
 
 // Policy-based authorization
 // builder.Services.AddAuthorization(options =>
