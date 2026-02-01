@@ -1,10 +1,13 @@
 using API.Extensions;
 using API.Filters;
 using API.Middleware;
+using Application.DependencyResolver;
 using Application.Interfaces;
+using Application.UseCases;
 using Auth.Manager.DependencyResolver;
 using FluentValidation;
 using Infrastructure.Data;
+using Infrastructure.DependencyResolver;
 using Infrastructure.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.DataProtection;
@@ -54,13 +57,15 @@ builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
 // MediatR for CQRS pattern in Application layer
 builder.Services.AddMediatR(typeof(Program).Assembly);
-
-// Dependency Injection: Scoped lifetimes to avoid singleton-scoped issues
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+// Dependency Injection: Application layer
+builder.Services.AddApplicationDependency();
+// Dependency Injection: Infrastructure layer repositories
+builder.Services.AddInfrastructureDependency(builder.Configuration);
 
 // EF Core for data access in Infrastructure layer
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                    );
 
 // Custom Platform Identity Services as Dependency Injection
 builder.Services.AddPlatformIdentity(builder.Configuration);
@@ -77,8 +82,7 @@ builder.Services.AddDataProtection()
     .SetApplicationName("NetWebApiMasterFeatures");
 
 // Health checks for production monitoring
-builder.Services.AddHealthChecks()
-    .AddDbContextCheck<AppDbContext>();
+builder.Services.AddHealthChecks().AddDbContextCheck<AppDbContext>();
 
 // CORS for cross-origin requests (restrict in production)
 builder.Services.AddCors(options =>

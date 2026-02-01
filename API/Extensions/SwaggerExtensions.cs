@@ -25,7 +25,7 @@ namespace API.Extensions
                     Scheme = "bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Enter: Bearer {your JWT token}"
+                    Description = "Enter:{your JWT token}"
                 });
 
                 // 🔐 Apply globally
